@@ -3,10 +3,6 @@ from flask import url_for
 from app_justcook.models.usuario import UsuarioModel
 
 
-
-
-
-
 class User(Resource):
     def get(self):
         return {'usuarios':[usuario.json() for usuario in UsuarioModel.query.all()]}, 200
@@ -28,7 +24,7 @@ class UserId(Resource):
         atributos.add_argument('telefone', type=str,required = True, help="O campo 'telefone' não pode ser vazio.")
         atributos.add_argument('data_nascimento', type=str)
         atributos.add_argument('sexo', type=str, choices=('F', 'M'), help='Bad choice:{Opção inválida}')
-    
+
         user = UsuarioModel.find_by_id(user_id)
         if not user:
             return {"message":"Usuario '{}' não encontrado.".format(user_id)}, 40
@@ -55,7 +51,7 @@ class UserRegister(Resource):
         atributos.add_argument('telefone', type=str,required = True, help="O campo 'telefone' não pode ser vazio.")
         atributos.add_argument('data_nascimento', type=str)
         atributos.add_argument('sexo', type=str, choices=('F', 'M'), help='Bad choice:{Opção inválida}')
-      
+
         dados = atributos.parse_args()
 
         if UsuarioModel.find_by_cpf(dados['cpf']):
@@ -65,7 +61,7 @@ class UserRegister(Resource):
         if UsuarioModel.find_by_email(dados['email']):
             return {"message":"Já existe uma conta vinculada a este e-mail '{}'.".format(dados['email'])}, 400
 
-    
+
 
         # nome, cpf, email, password, telefone, data_nascimento, sexo, confirmado, endereco_id
         user = UsuarioModel(nome=dados['nome'],cpf = dados['cpf'], email=dados['email'], password=dados['password'],
@@ -76,4 +72,3 @@ class UserRegister(Resource):
             user.save_user()
         except:
             return {'message':'Um erro interno ocorreu tentando salvar o usuario.'}, 500
-
