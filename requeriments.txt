@@ -26,6 +26,7 @@ jsonify==0.5
 lxml==4.4.1
 Mako==1.1.0
 MarkupSafe==1.1.1
+mysql-connector-python==8.0.20
 numpy==1.17.4
 packaging==19.2
 pandas==0.25.3
