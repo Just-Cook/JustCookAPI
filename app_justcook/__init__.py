@@ -18,5 +18,5 @@ from app_justcook.resources.item import Item, ItemId
 
 api.add_resource(User, '/usuarios')
 api.add_resource(UserId, '/usuarios/<int:user_id>')
-api.add_resource(Item, '/item')
-api.add_resource(ItemId, '/item/<int:item_id>')
+api.add_resource(Item, '/items')
+api.add_resource(ItemId, '/items/<int:item_id>')

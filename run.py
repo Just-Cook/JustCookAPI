@@ -1,9 +1,5 @@
 from app_justcook import app, db
-from flask_migrate import Migrate
 
-
-
-Migrate(app, db)
 
 
 @app.shell_context_processor
