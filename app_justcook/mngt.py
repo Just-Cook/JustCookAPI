@@ -1,5 +1,4 @@
 from app_justcook import app, db
-from app_justcook.models.usuario import UsuarioModel
 from app_justcook.models.item import ItemModel
 
 
