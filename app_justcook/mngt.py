@@ -15,12 +15,6 @@ def create_db():
 
 
 def populate_db():
-    usuario = UsuarioModel(nome='Admin', password='root', cpf='61610671023',
-    telefone = '88888888', data_nascimento = '2010/04/05', sexo = 'F', email='colmeia.severina@gmail.com')
-    db.session.add(usuario)
-    db.session.commit()
-    print("Usuario Admin adicionando.")
-
     item = ItemModel(titulo="Formas de aluminio", descricao="As tradicionais formas de aluminio são as mais tradicionais na cozinha ... ",
     image_name = "formadealuminio")
     db.session.add(item)
