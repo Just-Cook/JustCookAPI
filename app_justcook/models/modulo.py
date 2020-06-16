@@ -1,4 +1,7 @@
 from app_justcook import db
+from .modulo_tecnica import modulo_tecnica
+from .tecnica import TecnicaModel
+from .receita import ReceitaModel
 
 
 class ModuloModel(db.Model):
@@ -11,7 +14,7 @@ class ModuloModel(db.Model):
     descricao = db.Column(db.Text)
     nivel = db.Column(db.String(20))
 
-    tecnicas = db.relationship('TecnicaModel', secondary=modulo_tecnica, backref=db.backref('modulo', lazy='dynamic'))
+    tecnicas = db.relationship('TecnicaModel', secondary=modulo_tecnica, backref='modulo', lazy='dynamic')
     receitas = db.relationship('ReceitaModel', backref='modulo', lazy='dynamic')
 
 
@@ -31,7 +34,9 @@ class ModuloModel(db.Model):
             'subtitulo':self.subtitulo,
             'image_name':self.image_name,
             'descricao':self.descricao,
-            'nivel':self.nivel
+            'nivel':self.nivel,
+            'tecnicas':{'tecnicas':[tecnica.json() for tecnica in self.tecnicas]},
+            'receitas':{'receitas':[receita.json() for receita in self.receitas]}
 
         }
 

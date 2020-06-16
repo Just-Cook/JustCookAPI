@@ -1,5 +1,6 @@
 from app_justcook import db
-from .receita import ReceitaModel
+from .tecnica_passo import tecnica_passo
+from .dica import DicaModel
 
 class PassoModel(db.Model):
     __tablename__ = 'passo'
@@ -8,12 +9,12 @@ class PassoModel(db.Model):
     descricao = db.Column(db.Text)
     image_name = db.Column(db.String(20))
     cronometro = db.Column(db.Integer)
-    receita_id = db.Column(db.Integer, nullable=False, db.ForeignKey('receita.id'))
+    receita_id = db.Column(db.Integer, db.ForeignKey('receita.id'), nullable=False)
 
     dicas = db.relationship('DicaModel', backref='passo', lazy='dynamic')
 
 
-    tecnicas = db.relationship('TecnicaModel', secondary=tecnica_passo, backref=db.backref('modulo', lazy='dynamic'))
+    tecnicas = db.relationship('TecnicaModel', secondary=tecnica_passo, backref=db.backref('passo', lazy='dynamic'))
 
     def __init__(self, descricao, image_name, cronometro, modulo_id):
         self.descricao = descricao

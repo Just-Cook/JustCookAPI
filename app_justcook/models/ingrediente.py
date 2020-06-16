@@ -1,5 +1,5 @@
 from app_justcook import db
-from .receita import ReceitaModel
+
 
 
 class IngredienteModel(db.Model):
@@ -9,7 +9,7 @@ class IngredienteModel(db.Model):
     nome = db.Column(db.String(100))
     quantidade = db.Column(db.Float(precision=1))
     unidade = db.Column(db.String(7))
-    receita_id = db.Column(db.Integer, nullable=False, db.ForeignKey('receita.id'))
+    receita_id = db.Column(db.Integer, db.ForeignKey('receita.id'), nullable=False)
 
 
     def __init__(self, nome, quantidade, unidade, receita_id):
