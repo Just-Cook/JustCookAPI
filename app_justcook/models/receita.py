@@ -13,6 +13,7 @@ class ReceitaModel(db.Model):
     modulo_id = db.Column(db.Integer, nullable=False)
 
     passos = db.relationship('PassoModel', backref='receita', lazy='dynamic')
+    ingredientes = db.relationship('IngredienteModel', backref='receita', lazy='dynamic')
 
 
     def __init__(self, titulo, descricao, image_name, rendimento, tempo, nivel, modulo_id):
