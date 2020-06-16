@@ -36,6 +36,6 @@ class PassoModel(db.Model):
     def find_by_id(cls, id):
         passo = cls.query.filter_by(id=id).first()
 
-        if(passo):
+        if passo:
             return passo
         return None

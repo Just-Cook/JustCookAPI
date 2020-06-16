@@ -25,11 +25,10 @@ class DicaModel(db.Model):
     def find_by_id(cls, id):
         dica = cls.query.filter_by(id=id).first()
 
-        if(dica):
+        if dica:
             return dica
         return None
 
     @classmethod
     def find_all(cls):
         return cls.query.all()
-    

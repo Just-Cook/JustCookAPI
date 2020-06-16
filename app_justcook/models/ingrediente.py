@@ -31,7 +31,7 @@ class IngredienteModel(db.Model):
     def find_by_id(cls, id):
         ingrediente = cls.query.filter_by(id=id).first()
 
-        if(ingrediente):
+        if ingrediente:
             return ingrediente
         return None
 
