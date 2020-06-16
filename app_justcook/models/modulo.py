@@ -12,7 +12,7 @@ class ModuloModel(db.Model):
     nivel = db.Column(db.String(20))
 
     tecnicas = db.relationship('TecnicaModel', secondary=modulo_tecnica, backref=db.backref('modulo', lazy='dynamic'))
-
+    receitas = db.relationship('ReceitaModel', backref='modulo', lazy='dynamic')
 
 
 

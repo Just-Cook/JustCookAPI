@@ -1,4 +1,5 @@
 from app_justcook import db
+from .modulo import ModuloModel
 
 class ReceitaModel(db.Model):
     __tablename__='receita'
@@ -10,7 +11,7 @@ class ReceitaModel(db.Model):
     rendimento = db.Column(db.Integer)
     tempo = db.Column(db.Integer)
     nivel = db.Column(db.String(20))
-    modulo_id = db.Column(db.Integer, nullable=False)
+    modulo_id = db.Column(db.Integer, nullable=False, db.ForeignKey('modulo.id'))
 
     passos = db.relationship('PassoModel', backref='receita', lazy='dynamic')
     ingredientes = db.relationship('IngredienteModel', backref='receita', lazy='dynamic')
