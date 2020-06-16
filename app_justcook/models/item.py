@@ -8,8 +8,9 @@ class ItemModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     titulo = db.Column(db.String(100))
-    descricao = db.Column(db.String(500))
+    descricao = db.Column(db.Text)
     image_name = db.Column(db.String(500))
+    tecnica_id = db.Column(db.Integer, nullable=False)
 
 
     def get_id(self):
@@ -21,6 +22,14 @@ class ItemModel(db.Model):
        self.image_name = image_name
 
 
+    def json(self):
+      return {
+          'id':self.id,
+          'titulo': self.titulo,
+          'descricao': self.descricao,
+          'image_name':self.image_name
+
+      }
 
     @classmethod
     def find_by_id(cls, id):
@@ -30,22 +39,7 @@ class ItemModel(db.Model):
         return None
 
 
-    def json(self):
-        return {
-            'id':self.id,
-            'titulo': self.titulo,
-            'descricao': self.descricao,
-            'image_name':self.image_name
-
-        }
-
-
-    def save_item(self):
-        db.session.add(self)
-        db.session.commit()
-
-
-    def update_item(self, titulo, descricao, image_name):
-        self.titulo = titulo
-        self.descricao = descricao
-        self.image_name = image_name
+    @classmethod
+    def find_all(cls):
+        items = cls.query.all()
+        return {'items': [item.json() for item in items]}
