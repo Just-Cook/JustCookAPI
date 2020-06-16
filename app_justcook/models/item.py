@@ -1,5 +1,5 @@
 from app_justcook import db
-
+from .tecnica import TecnicaModel
 
 
 
@@ -10,7 +10,7 @@ class ItemModel(db.Model):
     titulo = db.Column(db.String(100))
     descricao = db.Column(db.Text)
     image_name = db.Column(db.String(20))
-    tecnica_id = db.Column(db.Integer, nullable=False)
+    tecnica_id = db.Column(db.Integer, db.ForeignKey('tecnica.id'), nullable=False)
 
 
     def get_id(self):

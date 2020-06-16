@@ -8,6 +8,7 @@ class TecnicaModel(db.Model):
     titulo = db.Column(db.String(50))
     image_name = db.Column(db.String(20))
 
+    items = db.relationship('ItemModel', backref='tecnica', lazy='dynamic')
 
 
     def __init__(self, titulo, image_name):
