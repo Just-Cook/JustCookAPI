@@ -1,5 +1,5 @@
 
 #SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:@localhost/dbjustcook'
-SQLALCHEMY_DATABASE_URI =  'mysql+pymysql://bebe8d06f7da0b:40bca22a@us-cdbr-east-05.cleardb.net/heroku_baa6c8c336f761a'
+SQLALCHEMY_DATABASE_URI =  'mysql+pymysql://b5d50d51499f64:5dd68b20@us-cdbr-east-05.cleardb.net/heroku_4fb1a6fda367bda?reconnect=true'
 # SQLAlchemy monitorará modificações de objetos
 SQLALCHEMY_TRACK_MODIFICATIONS = True
