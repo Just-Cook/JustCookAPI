@@ -37,5 +37,4 @@ class IngredienteModel(db.Model):
 
     @classmethod
     def find_all(cls, id):
-        ingredientes = cls.query.all()
-        return {'ingredientes':[ingrediente.json() for ingrediente in ingredientes]}
+        return cls.query.all()
