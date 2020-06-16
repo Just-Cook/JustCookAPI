@@ -31,5 +31,5 @@ class DicaModel(db.Model):
 
     @classmethod
     def find_all(cls):
-        dicas = cls.query.all()
-        return {'dicas':[dica.json() for dica in dicas]}
+        return cls.query.all()
+    

@@ -9,7 +9,7 @@ class ItemModel(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     titulo = db.Column(db.String(100))
     descricao = db.Column(db.Text)
-    image_name = db.Column(db.String(500))
+    image_name = db.Column(db.String(20))
     tecnica_id = db.Column(db.Integer, nullable=False)
 
 
@@ -41,5 +41,4 @@ class ItemModel(db.Model):
 
     @classmethod
     def find_all(cls):
-        items = cls.query.all()
-        return {'items': [item.json() for item in items]}
+        return cls.query.all()

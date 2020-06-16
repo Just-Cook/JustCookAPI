@@ -5,7 +5,8 @@ from app_justcook.models.item import ItemModel
 
 class Item(Resource):
     def get(self):
-        return ItemModel.find_all(), 200
+        items = ItemModel.find_all()
+        return {'items': [item.json() for item in items]}, 200
 
 
 class ItemId(Resource):
