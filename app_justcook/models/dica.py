@@ -1,4 +1,5 @@
 from app_justcook import db
+from .passo import PassoModel
 
 
 class DicaModel(db.Model):
@@ -6,7 +7,7 @@ class DicaModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     descricao = db.Column(db.Text)
-    passo_id = db.Column(db.Integer, nullable=False)
+    passo_id = db.Column(db.Integer, nullable=False, db.ForeignKey('passo.id'))
 
 
     def __init__(self, descricao, passo_id):

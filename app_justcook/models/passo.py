@@ -9,6 +9,8 @@ class PassoModel(db.Model):
     cronometro = db.Column(db.Integer)
     modulo_id = db.Column(db.Integer, nullable=False)
 
+    dicas = db.relationship('DicaModel', backref='passo', lazy='dynamic')
+
 
     tecnicas = db.relationship('TecnicaModel', secondary=tecnica_passo, backref=db.backref('modulo', lazy='dynamic'))
 
