@@ -10,6 +10,8 @@ class PassoModel(db.Model):
     modulo_id = db.Column(db.Integer, nullable=False)
 
 
+    tecnicas = db.relationship('TecnicaModel', secondary=tecnica_passo, backref=db.backref('modulo', lazy='dynamic'))
+
     def __init__(self, descricao, image_name, cronometro, modulo_id):
         self.descricao = descricao
         self.image_name = image_name
