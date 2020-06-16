@@ -1,4 +1,5 @@
 from app_justcook import db
+from .receita import ReceitaModel
 
 class PassoModel(db.Model):
     __tablename__ = 'passo'
@@ -7,7 +8,7 @@ class PassoModel(db.Model):
     descricao = db.Column(db.Text)
     image_name = db.Column(db.String(20))
     cronometro = db.Column(db.Integer)
-    modulo_id = db.Column(db.Integer, nullable=False)
+    receita_id = db.Column(db.Integer, nullable=False, db.ForeignKey('receita.id'))
 
     dicas = db.relationship('DicaModel', backref='passo', lazy='dynamic')
 

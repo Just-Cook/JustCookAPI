@@ -12,6 +12,8 @@ class ReceitaModel(db.Model):
     nivel = db.Column(db.String(20))
     modulo_id = db.Column(db.Integer, nullable=False)
 
+    passos = db.relationship('PassoModel', backref='receita', lazy='dynamic')
+
 
     def __init__(self, titulo, descricao, image_name, rendimento, tempo, nivel, modulo_id):
         self.titulo = titulo
