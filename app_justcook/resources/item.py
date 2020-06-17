@@ -1,5 +1,4 @@
-from flask_restful import Resource, reqparse
-from flask import url_for
+from flask_restful import Resource
 from app_justcook.models.item import ItemModel
 
 
