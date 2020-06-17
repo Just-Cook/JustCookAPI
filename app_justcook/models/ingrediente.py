@@ -37,5 +37,5 @@ class IngredienteModel(db.Model):
         return None
 
     @classmethod
-    def find_all(cls, id):
+    def find_all(cls):
         return cls.query.all()

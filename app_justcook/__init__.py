@@ -42,7 +42,7 @@ api.add_resource(TecnicasByPassoId, '/passos/<int:passo_id>/tecnicas')
 
 api.add_resource(Receita, '/receitas')
 api.add_resource(ReceitaId, '/receitas/<int:receita_id>')
-api.add_resource(IngredientesByReceitaId, '/receitas/<int:receita>/ingredientes')
+api.add_resource(IngredientesByReceitaId, '/receitas/<int:receita_id>/ingredientes')
 api.add_resource(PassosByReceitaId, '/receitas/<int:receita_id>/passos')
 
 api.add_resource(Tecnica, '/tecnicas')
