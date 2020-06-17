@@ -13,4 +13,4 @@ class DicaId(Resource):
         dica = DicaModel.find_by_id(dica_id)
         if dica:
             return dica.json(), 200
-        return {"message":"Dica '{}' não encontrado.".format(item_id)}, 404
+        return {"message":"Dica '{}' não encontrado.".format(dica_id)}, 404
