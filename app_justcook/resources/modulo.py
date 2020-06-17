@@ -1,5 +1,5 @@
 from app_justcook.models.modulo import ModuloModel
-from flask_restful import Api, Resource
+from flask_restful import Resource
 
 
 
