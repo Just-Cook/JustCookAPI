@@ -7,7 +7,7 @@ Executar a aplicação:
 
 create a database dbjustcook in MySQL Workbench
 
-active MySQL 
+activate MySQL 
 
 pip install -r requirements.txt
 
