@@ -17,6 +17,7 @@ from app_justcook.resources.item import Item, ItemId
 from app_justcook.resources.modulo import Modulo, ModuloId, ReceitasByModuloId, TecnicasByModuloId
 from app_justcook.resources.dica import Dica, DicaId
 from app_justcook.resources.ingrediente import Ingrediente, IngredienteId
+from app_justcook.resources.passo import Passo, PassoId, DicasByPassoId, TecnicasByPassoId
 
 api.add_resource(Item, '/items')
 api.add_resource(ItemId, '/items/<int:item_id>')
@@ -28,3 +29,7 @@ api.add_resource(Dica, '/dicas')
 api.add_resource(DicaId, '/dicas/<int:dica_id>')
 api.add_resource(Ingrediente, '/ingredientes')
 api.add_resource(IngredienteId, '/ingredientes/<int:ingrediente_id>')
+api.add_resource(Passo,'/passos')
+api.add_resource(PassoId, '/passos/<int:passo_id>')
+api.add_resource(DicasByPassoId, '/passos/<int:passo_id>/dicas')
+api.add_resource(TecnicasByPassoId, '/passos/<int:passo_id>/tecnicas')
