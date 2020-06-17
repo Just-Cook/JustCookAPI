@@ -34,9 +34,7 @@ class ModuloModel(db.Model):
             'subtitulo':self.subtitulo,
             'image_name':self.image_name,
             'descricao':self.descricao,
-            'nivel':self.nivel,
-            'tecnicas':{'tecnicas':[tecnica.json() for tecnica in self.tecnicas]},
-            'receitas':{'receitas':[receita.json() for receita in self.receitas]}
+            'nivel':self.nivel
 
         }
 
