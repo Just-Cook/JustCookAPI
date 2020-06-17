@@ -19,22 +19,32 @@ from app_justcook.resources.dica import Dica, DicaId
 from app_justcook.resources.ingrediente import Ingrediente, IngredienteId
 from app_justcook.resources.passo import Passo, PassoId, DicasByPassoId, TecnicasByPassoId
 from app_justcook.resources.receita import Receita, ReceitaId, IngredientesByReceitaId, PassosByReceitaId
+from app_justcook.resources.tecnica import Tecnica, TecnicaId, ItemsByTecnica
 
 api.add_resource(Item, '/items')
 api.add_resource(ItemId, '/items/<int:item_id>')
+
 api.add_resource(Modulo, '/modulos')
 api.add_resource(ModuloId, '/modulos/<int:modulo_id>')
 api.add_resource(ReceitasByModuloId, '/modulos/<int:modulo_id>/receitas')
 api.add_resource(TecnicasByModuloId, '/modulos/<int:modulo_id>/tecnicas')
+
 api.add_resource(Dica, '/dicas')
 api.add_resource(DicaId, '/dicas/<int:dica_id>')
+
 api.add_resource(Ingrediente, '/ingredientes')
 api.add_resource(IngredienteId, '/ingredientes/<int:ingrediente_id>')
+
 api.add_resource(Passo,'/passos')
 api.add_resource(PassoId, '/passos/<int:passo_id>')
 api.add_resource(DicasByPassoId, '/passos/<int:passo_id>/dicas')
 api.add_resource(TecnicasByPassoId, '/passos/<int:passo_id>/tecnicas')
+
 api.add_resource(Receita, '/receitas')
 api.add_resource(ReceitaId, '/receitas/<int:receita_id>')
 api.add_resource(IngredientesByReceitaId, '/receitas/<int:receita>/ingredientes')
 api.add_resource(PassosByReceitaId, '/receitas/<int:receita_id>/passos')
+
+api.add_resource(Tecnica, '/tecnicas')
+api.add_resource(TecnicaId, '/tecnicas/<int:tecnica_id>')
+api.add_resource(ItemsByTecnica, '/tecnicas/<int:tecnica_id>/items')
