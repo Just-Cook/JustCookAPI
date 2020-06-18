@@ -4,6 +4,8 @@ from app_justcook.models.tecnica import TecnicaModel
 from app_justcook.models.modulo import ModuloModel
 from app_justcook.models.receita import ReceitaModel
 from app_justcook.models.ingrediente import IngredienteModel
+from app_justcook.models.passo import PassoModel
+from app_justcook.models.dica import DicaModel
 
 
 
@@ -315,4 +317,142 @@ def populate_db():
     ingrediente_arroz_brocolis_7 = IngredienteModel(nome="sal", quantidade=None, unidade="a gosto", receita_id=receita_arroz_brocolis.id)
 
     db.session.add(ingrediente_arroz_brocolis_7)
+    db.session.commit()
+
+    #Passos
+
+    maminha_passo_1 = PassoModel(image_name="maminha-passo-1", descricao="Limpe a maminha retirando o excesso de pele.",
+    cronometro=None, receita_id=receita_maminha.id)
+    maminha_passo_1.tecnicas.append(tecnica_maminha)
+    maminha_passo_1.tecnicas.append(tecnica_carne)
+
+    db.session.add(maminha_passo_1)
+    db.session.commit()
+
+    maminha_dica_1 = DicaModel(descricao="Ligue o forno para aquece-lo 180 graus.", passo_id=maminha_passo_1.id)
+
+    db.session.add(maminha_dica_1)
+
+    maminha_passo_2 = PassoModel(image_name="maminha-passo-2", descricao=" Forre uma forma com sal grosso, fazendo uma cama para a maminha e em seguida coloque-a com a gordura virada para cima.",
+    cronometro=None, receita_id=receita_maminha.id)
+
+    db.session.add(maminha_passo_2)
+    db.session.commit()
+
+    maminha_dica_2 = DicaModel(descricao="A forma a ser utilizada pode ser de qualquer material que pode ser levado ao forno.",
+    passo_id=maminha_passo_2.id)
+
+    db.session.add(maminha_dica_2)
+    db.session.commit()
+
+    maminha_passo_3 = PassoModel(image_name="maminha-passo-3", descricao="Cubra o restante da carne com sal grosso, de forma que não fique nenhum pedaço da carne visível.",
+    cronometro=None, receita_id=receita_maminha.id)
+
+    db.session.add(maminha_passo_3)
+    db.session.commit()
+
+    maminha_passo_4 = PassoModel(image_name="maminha-passo-4", descricao=" Leve ao forno para assar em forno pré aquecido a 180 graus por aproximadamente 1h e 30min.",
+    cronometro=5400, receita_id=receita_maminha.id)
+    maminha_passo_4.tecnicas.append(tecnica_forno)
+
+    db.session.add(maminha_passo_4)
+    db.session.commit()
+
+    maminha_passo_5 = PassoModel(image_name="maminha-passo-5", descricao="Retire do forno e tire toda a crosta de sal com cuidado",
+    cronometro=None, receita_id=receita_maminha.id)
+
+    db.session.add(maminha_passo_5)
+    db.session.commit()
+
+    maminha_passo_6 = PassoModel(image_name="maminha-passo-6", descricao="Leve a carne a uma tábua de corte para fatiá-la e monte em uma travessa sem desmontar a peça.",
+    cronometro=None, receita_id=receita_maminha.id)
+
+    db.session.add(maminha_passo_6)
+    db.session.commit()
+
+
+
+    feijao_verde_passo_1 = PassoModel(image_name="feijao-verde-passo-1", descricao="Coloque o feijão verde na panela de pressão e cozinhe por aproximadamente 10 minutos.",
+    cronometro=600, receita_id=receita_feijao_verde.id)
+    feijao_verde_passo_1.tecnicas.append(tecnica_panela_pressao)
+
+    db.session.add(feijao_verde_passo_1)
+    db.session.commit()
+
+    feijao_verde_passo_2 = PassoModel(image_name="feijao-verde-passo-2", descricao="Retire do fogo e espere sair toda a pressão. Em seguida escorra o feijão, despreze a água.",
+    cronometro=None, receita_id=receita_feijao_verde.id)
+
+    db.session.add(feijao_verde_passo_2)
+    db.session.commit()
+
+    feijao_verde_passo_3 = PassoModel(image_name="feijao-verde-passo-3", descricao="Corte a cebola e o alho em pedaços bem pequenos e refogue-os no azeite de oliva com o caldo de galinha.",
+    cronometro=None, receita_id=receita_feijao_verde.id)
+
+    db.session.add(feijao_verde_passo_3)
+    db.session.commit()
+
+    feijao_verde_dica_1 = DicaModel(descricao="Deixe o alho dourar, mas cuidado para não queimá-lo.", passo_id=feijao_verde_passo_3.id)
+
+    db.session.add(feijao_verde_dica_1)
+    db.session.commit()
+
+    feijao_verde_passo_4 = PassoModel(image_name="feijao-verde-passo-4", descricao="Acrescente o feijão aos poucos e vá misturando. Em seguida acrescente o queijo e pra finalizar o cheiro verde.",
+    cronometro=None, receita_id=receita_feijao_verde.id)
+
+    db.session.add(feijao_verde_passo_4)
+    db.session.commit()
+
+    feijao_verde_dica_2 = DicaModel(descricao="Se você sentir necessidade pode acrescentar uma pitada de sal.", passo_id=feijao_verde_passo_4.id)
+
+    db.session.add(feijao_verde_dica_2)
+    db.session.commit()
+
+    feijao_verde_dica_3 = DicaModel(descricao="Acrescente um pouco mais de cheiro verde após apagar o fogo para decorá-lo.", passo_id=feijao_verde_passo_4.id)
+
+    db.session.add(feijao_verde_dica_3)
+    db.session.commit()
+
+    arroz_brocolis_passo_1  = PassoModel(image_name="arroz-brocolis-passo-1", descricao="Em uma panela junte o alho e o óleo e deixe dourar. Em seguida acrescente o arroz e refoque bem.",
+    cronometro=None, receita_id=receita_arroz_brocolis.id)
+
+    db.session.add(arroz_brocolis_passo_1)
+    db.session.commit()
+
+    arroz_brocolis_dica_1 = DicaModel(descricao="Nesse momento a água já deve estar no fogo para ferver.", passo_id=arroz_brocolis_passo_1.id)
+
+    db.session.add(arroz_brocolis_dica_1)
+    db.session.commit()
+
+    arroz_brocolis_passo_2 = PassoModel(image_name="arroz-brocolis-passo-2", descricao="Coloque sal a gosto e misture, acrescente a água fervente e deixe cozinhar.",
+    cronometro=None, receita_id=receita_arroz_brocolis.id)
+
+    db.session.add(arroz_brocolis_passo_2)
+    db.session.commit()
+
+    arroz_brocolis_dica_2 = DicaModel(descricao="Você já pode ir picando o brócolis enquanto o arroz cozinha.", passo_id=arroz_brocolis_passo_2.id)
+
+    db.session.add(arroz_brocolis_dica_2)
+    db.session.commit()
+
+    arroz_brocolis_passo_3 = PassoModel(image_name="arroz-brocolis-passo-3", descricao="Com o arroz cozido solte todo o arroz com uma colher.",
+    cronometro=None, receita_id=receita_arroz_brocolis.id)
+
+    db.session.add(arroz_brocolis_passo_3)
+    db.session.commit()
+
+    arroz_brocolis_passo_4 = PassoModel(image_name="arroz-brocolis-passo-4", descricao="Em outra panela acrescente o brócolis picado com o azeite e refogue o brócolis.",
+    cronometro=None, receita_id=receita_arroz_brocolis.id)
+
+    db.session.add(arroz_brocolis_passo_4)
+    db.session.commit()
+
+    arroz_brocolis_dica_3 = DicaModel(descricao="Você pode utilizar a manteiga no lugar do azeite.", passo_id=arroz_brocolis_passo_4.id)
+
+    db.session.add(arroz_brocolis_passo_4)
+    db.session.commit()
+
+    arroz_brocolis_passo_5 = PassoModel(image_name="arroz-brocolis-passo-5", descricao="Misture o arroz na panela do brócolis aos poucos sempre mehendo. Quando tiver bem misturado você pode apagar o fogo e servir.",
+    cronometro=None, receita_id=receita_arroz_brocolis.id)
+
+    db.session.add(arroz_brocolis_passo_5)
     db.session.commit()
