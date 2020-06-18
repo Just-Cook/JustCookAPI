@@ -7,7 +7,7 @@ class PassoModel(db.Model):
 
     id = db.Column(db.Integer, autoincrement=True, primary_key= True)
     descricao = db.Column(db.Text)
-    image_name = db.Column(db.String(20))
+    image_name = db.Column(db.String(50))
     cronometro = db.Column(db.Integer)
     receita_id = db.Column(db.Integer, db.ForeignKey('receita.id'), nullable=False)
 
@@ -16,11 +16,11 @@ class PassoModel(db.Model):
 
     tecnicas = db.relationship('TecnicaModel', secondary=tecnica_passo, backref=db.backref('passo', lazy='dynamic'))
 
-    def __init__(self, descricao, image_name, cronometro, modulo_id):
+    def __init__(self, descricao, image_name, cronometro, receita_id):
         self.descricao = descricao
         self.image_name = image_name
         self.cronometro = cronometro
-        self.modulo_id = modulo_id
+        self.receita_id = receita_id
 
 
     def json(self):
@@ -29,7 +29,7 @@ class PassoModel(db.Model):
             'descricao':self.descricao,
             'image_name':self.image_name,
             'cronometro':self.cronometro,
-            'modulo_id':self.modulo_id
+            'receita_id':self.receita_id
 
         }
 

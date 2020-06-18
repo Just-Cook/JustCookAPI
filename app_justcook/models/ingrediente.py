@@ -7,8 +7,8 @@ class IngredienteModel(db.Model):
 
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     nome = db.Column(db.String(100))
-    quantidade = db.Column(db.Float(precision=1))
-    unidade = db.Column(db.String(7))
+    quantidade = db.Column(db.Integer)
+    unidade = db.Column(db.String(15))
     receita_id = db.Column(db.Integer, db.ForeignKey('receita.id'), nullable=False)
 
 

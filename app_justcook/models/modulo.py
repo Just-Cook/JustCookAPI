@@ -8,11 +8,11 @@ class ModuloModel(db.Model):
     __tablename__ = 'modulo'
 
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    titulo = db.Column(db.String(50))
-    subtitulo = db.Column(db.String(50))
-    image_name = db.Column(db.String(20))
+    titulo = db.Column(db.String(100))
+    subtitulo = db.Column(db.String(100))
+    image_name = db.Column(db.String(50))
     descricao = db.Column(db.Text)
-    nivel = db.Column(db.String(20))
+    nivel = db.Column(db.Integer)
 
     tecnicas = db.relationship('TecnicaModel', secondary=modulo_tecnica, backref='modulo', lazy='dynamic')
     receitas = db.relationship('ReceitaModel', backref='modulo', lazy='dynamic')

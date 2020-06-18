@@ -5,8 +5,8 @@ class TecnicaModel(db.Model):
     __tablename__='tecnica'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    titulo = db.Column(db.String(50))
-    image_name = db.Column(db.String(20))
+    titulo = db.Column(db.String(100))
+    image_name = db.Column(db.String(50))
 
     items = db.relationship('ItemModel', backref='tecnica', lazy='dynamic')
 
