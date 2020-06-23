@@ -6,7 +6,7 @@ from flask_restful import Resource
 class Modulo(Resource):
     def get(self):
         modulos = ModuloModel.find_all()
-        return {'modulos':[modulo.json() for modulo in modulos]}, 200
+        return [modulo.json() for modulo in modulos], 200
 
 class ModuloId(Resource):
     def get(self, modulo_id):
@@ -22,7 +22,7 @@ class ReceitasByModuloId(Resource):
         if not modulo:
             return {"message":"Modulo '{}' não encontrado.".format(modulo_id)}, 404
         receitas = modulo.receitas
-        return {'receitas':[receita.json() for receita in receitas]}
+        return [receita.json() for receita in receitas], 200
 
 class TecnicasByModuloId(Resource):
     def get(self, modulo_id):
@@ -30,4 +30,4 @@ class TecnicasByModuloId(Resource):
         if not modulo:
             return {"message":"Modulo '{}' não encontrado.".format(modulo_id)}, 404
         tecnicas = modulo.tecnicas
-        return {'tecnicas':[tecnica.json() for tecnica in tecnicas]}, 200
+        return [tecnica.json() for tecnica in tecnicas], 200

@@ -5,7 +5,7 @@ from flask_restful import Resource
 class Passo(Resource):
     def get(self):
         passos = PassoModel.find_all()
-        return {'passos':[passo.json() for passo in passos]}, 200
+        return [passo.json() for passo in passos], 200
 
 class PassoId(Resource):
     def get(self, passo_id):
@@ -20,7 +20,7 @@ class DicasByPassoId(Resource):
         if not passo:
             return {"message":"Passo '{}' não encontrado.".format(passo_id)}, 404
         dicas = passo.dicas
-        return {'dicas':[dica.json() for dica in dicas]}, 200
+        return [dica.json() for dica in dicas], 200
 
 class TecnicasByPassoId(Resource):
     def get(self, passo_id):
@@ -28,4 +28,4 @@ class TecnicasByPassoId(Resource):
         if not passo:
             return {"message":"Passo '{}' não encontrado.".format(passo_id)}, 404
         tecnicas = passo.tecnicas
-        return {'tecnicas':[tecnica.json() for tecnica in tecnicas]}, 200
+        return [tecnica.json() for tecnica in tecnicas], 200

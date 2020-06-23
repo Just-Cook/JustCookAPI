@@ -6,7 +6,7 @@ from flask_restful import Resource
 class Dica(Resource):
     def get(self):
         dicas = DicaModel.find_all()
-        return {'dicas':[dica.json() for dica in dicas]}, 200
+        return [dica.json() for dica in dicas], 200
 
 class DicaId(Resource):
     def get(self, dica_id):

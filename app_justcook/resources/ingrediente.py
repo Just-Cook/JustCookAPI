@@ -6,7 +6,7 @@ from flask_restful import Resource
 class Ingrediente(Resource):
     def get(self):
         ingredientes = IngredienteModel.find_all()
-        return {'ingredientes':[ingrediente.json() for ingrediente in ingredientes]}, 200
+        return [ingrediente.json() for ingrediente in ingredientes], 200
 
 class IngredienteId(Resource):
     def get(self, ingrediente_id):
