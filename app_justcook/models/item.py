@@ -28,7 +28,8 @@ class ItemModel(db.Model):
           'id':self.id,
           'titulo': self.titulo,
           'descricao': self.descricao,
-          'image_name':self.image_name
+          'image_name':self.image_name,
+          'tecnica_id':self.tecnica_id
 
       }
 
