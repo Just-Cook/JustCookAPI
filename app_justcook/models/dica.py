@@ -7,19 +7,19 @@ class DicaModel(db.Model):
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     descricao = db.Column(db.Text)
-    passo_id = db.Column(db.Integer,  db.ForeignKey('passo.id'), nullable=False)
+#    passo_id = db.Column(db.Integer,  db.ForeignKey('passo.id'), nullable=False)
 
 
-    def __init__(self, descricao, passo_id):
+    def __init__(self, descricao):
         self.descricao = descricao
-        self.passo_id = passo_id
+#        self.passo_id = passo_id
 
 
     def json(self):
         return {
             'id':self.id,
-            'descricao':self.descricao,
-            'passo_id':self.passo_id
+            'descricao':self.descricao
+        #    'passo_id':self.passo_id
         }
 
     @classmethod
