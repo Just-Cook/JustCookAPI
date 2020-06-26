@@ -36,16 +36,17 @@ def populate_db():
 
     #Item
     item_forno_1 = ItemModel(titulo="Como utilzar o forno?", image_name="tecnica_forno", descricao="""Para acender um forno a gás primeiro deve encontrar a chama piloto, localizada no fundo do eletrodoméstico. Só tem que abrir a porta e olhar no seu interior, onde logo no centro se situa uma peça de metal pequena.
-Em seguida, aproxime do buraco do piloto um fósforo ou um isqueiro para acender o forno. Deve aparecer uma chama azul, que indicará que o forno já pode ser utilizado.
-Depois, coloque o eletrodoméstico para funcionar com os botões correspondentes e pronto. Já pode começar a cozinhar!
 
-O forno a gás atinge mais rapidamente um nível elevado de calor comparado com o forno elétrico, além de esfriar mais depressa depois. Este sistema em sua classe convencional tem pontos quentes e pontos frios, o que faz com que o alimento não cozinhe de forma equilibrada. Para resolver isso é melhor adquirir um forno a gás de convecção, que dispõe de uma ventoinha interior para repartir o calor de forma uniforme. A ventoinha do forno é muito útil para melhorar a circulação de ar, tentando assar os alimentos de forma equitativa. Além disso, também pode ser usada para evitar que a receita saia úmida pela combustão do gás. Assim, a ventoinha mantém o alimento crocante e seco.
+    Em seguida, aproxime do buraco do piloto um fósforo ou um isqueiro para acender o forno. Deve aparecer uma chama azul, que indicará que o forno já pode ser utilizado. Depois, coloque o eletrodoméstico para funcionar com os botões correspondentes e pronto. Já pode começar a cozinhar!
 
-Os fornos a gás também podem chegar a queimar a parte de baixo dos seus alimentos, porque o calor costuma ser muito elevado na parte inferior deste eletrodoméstico. Portanto, para evitar que isso aconteça, é recomendável utilizá-lo com uma bandeja ou panela para cozinhar de forma isolada.
+    O forno a gás atinge mais rapidamente um nível elevado de calor comparado com o forno elétrico, além de esfriar mais depressa depois. Este sistema em sua classe convencional tem pontos quentes e pontos frios, o que faz com que o alimento não cozinhe de forma equilibrada. Para resolver isso é melhor adquirir um forno a gás de convecção, que dispõe de uma ventoinha interior para repartir o calor de forma uniforme. A ventoinha do forno é muito útil para melhorar a circulação de ar, tentando assar os alimentos de forma equitativa. Além disso, também pode ser usada para evitar que a receita saia úmida pela combustão do gás. Assim, a ventoinha mantém o alimento crocante e seco.
 
-Neste tipo de fornos, a temperatura costuma ser irregular devido à liberação do gás que varia segundo o momento. Se estiver preocupado por desconhecer a temperatura em que está assando um alimento, o ideal é recorrer a um termômetro de forno, que poderá colocar no centro do mesmo para encontrar o nível de calor do mesmo.
-Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um calor mais direto recomenda-se colocar a bandeja na parte de baixo; caso contrário, pode situá-la na parte superior. Por outro lado, mesmo no meio também é uma boa opção se preferir um resultado equilibrado.
-""", tecnica_id=tecnica_forno.id)
+    Os fornos a gás também podem chegar a queimar a parte de baixo dos seus alimentos, porque o calor costuma ser muito elevado na parte inferior deste eletrodoméstico. Portanto, para evitar que isso aconteça, é recomendável utilizá-lo com uma bandeja ou panela para cozinhar de forma isolada.
+
+    Neste tipo de fornos, a temperatura costuma ser irregular devido à liberação do gás que varia segundo o momento. Se estiver preocupado por desconhecer a temperatura em que está assando um alimento, o ideal é recorrer a um termômetro de forno, que poderá colocar no centro do mesmo para encontrar o nível de calor do mesmo.
+
+    Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um calor mais direto recomenda-se colocar a bandeja na parte de baixo; caso contrário, pode situá-la na parte superior. Por outro lado, mesmo no meio também é uma boa opção se preferir um resultado equilibrado.""",
+    tecnica_id=tecnica_forno.id)
 
     db.session.add(item_forno_1)
     db.session.commit()
@@ -69,8 +70,8 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     4. Quando o pino começar a chiar e a balançar, abaixe o fogo.
     5. Depois que o tempo de cozimento passar desligue a panela e espere esfriar para sair toda a pressão de dentro antes de abrir. NUNCA ABRA A PANELA SEM RETIRAR A PRESSÃO.
     6. Se quiser tirar a pressão mais rapidamente, tire a panela do fogo, deixe esfriar um pouco e depois coloque embaixo da torneira molhando apenas a lateral da panela.
-    7. Se o pino abaixou e não faz mais barulho quando você toca nele, então toda a pressão saiu e você pode abrir a panela.
-    """, tecnica_id=tecnica_panela_pressao.id)
+    7. Se o pino abaixou e não faz mais barulho quando você toca nele, então toda a pressão saiu e você pode abrir a panela.""",
+    tecnica_id=tecnica_panela_pressao.id)
 
     db.session.add(item_panela_pressao_1)
     db.session.commit()
@@ -78,11 +79,9 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
 
 
 
-    item_panela_pressao_2 = ItemModel(titulo="Cuidados que você deve ter", image_name=None, descricao="""Nunca abra a panela sem ter certeza que não tem mais pressão dentro dela.
-    Só compre panelas de pressão com selo do Inmetro, não compre panelas de ambulantes.
-    Se o chiar do pino parar enquanto a panela estiver fervendo desligue o fogo, a panela não está funcionando corretamente.
-    Depois de usar a panela lave muito bem todas as partes, inclusive o pino e a borracha.
-    Se você observar que a borracha está seca ou querendo se partir, troque imediatamente.
+    item_panela_pressao_2 = ItemModel(titulo="Cuidados que você deve ter", image_name=None, descricao="""Nunca abra a panela sem ter certeza que não tem mais pressão dentro dela. Só compre panelas de pressão com selo do Inmetro, não compre panelas de ambulantes.
+
+    Se o chiar do pino parar enquanto a panela estiver fervendo desligue o fogo, a panela não está funcionando corretamente. Depois de usar a panela lave muito bem todas as partes, inclusive o pino e a borracha. Se você observar que a borracha está seca ou querendo se partir, troque imediatamente.
 
     Última coisa, panela de pressão não é eterna (isso é só uma marca) então, se verificar algum problema ou a panela já está velhinha mesmo, não tenha dúvida, troque.
     """, tecnica_id=tecnica_panela_pressao.id)
@@ -100,12 +99,9 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
 
     #Item
 
-    item_maminha_1 = ItemModel(titulo="O que é maminha?", image_name="tecnica_maminha", descricao="""A Maminha está entre os cortes bovinos considerados nobres. É um corte de carne muito procurado  para churrasco, pois é oriunda da peça completa de alcatra, que é composta ainda pelo miolo da alcatra e pela picanha.
-    Ou seja, erroneamente acredita-se que a Maminha é retirada da alcatra, mas apesar de ser ligada por uma membrana, não se trata do mesmo músculo.
-    É localizada no fim da peça inteira da alcatra (“rabo da alcatra”), próxima à ponta da agulha, no traseiro do boi.
+    item_maminha_1 = ItemModel(titulo="O que é maminha?", image_name="tecnica_maminha", descricao="""A Maminha está entre os cortes bovinos considerados nobres. É um corte de carne muito procurado  para churrasco, pois é oriunda da peça completa de alcatra, que é composta ainda pelo miolo da alcatra e pela picanha. Ou seja, erroneamente acredita-se que a Maminha é retirada da alcatra, mas apesar de ser ligada por uma membrana, não se trata do mesmo músculo. É localizada no fim da peça inteira da alcatra (“rabo da alcatra”), próxima à ponta da agulha, no traseiro do boi.
 
-    É considerada uma carne muito macia (quando cortada contra as fibras), suculenta, de sabor suave, que contém gordura. Deve ser cortada de forma correta, ou seja, contra as fibras, para acentuar sua maciez e sabor.
-    Se o corte das suas fibras for feito longitudinalmente, acompanhando o corte do miolo da alcatra por exemplo, torna-se uma carne dura.
+    É considerada uma carne muito macia (quando cortada contra as fibras), suculenta, de sabor suave, que contém gordura. Deve ser cortada de forma correta, ou seja, contra as fibras, para acentuar sua maciez e sabor. Se o corte das suas fibras for feito longitudinalmente, acompanhando o corte do miolo da alcatra por exemplo, torna-se uma carne dura.
     """, tecnica_id=tecnica_maminha.id)
 
     db.session.add(item_maminha_1)
@@ -113,11 +109,9 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
 
 
 
-    item_maminha_2 = ItemModel(titulo="Dicas e curiosidades",  image_name=None, descricao="""Uma peça de maminha pesa, em média, 2kg. A maminha tem uma pequena diferença em relação ao miolo da alcatra. Suas fibras são em forma de leque e o corte deve ser feito contra as fibras, em leque mesmo, mas isso compromete, de certa forma, as pontas.
-    Na Argentina, esse corte é bem mais aproveitado que no Brasil, pois neste tem sido vendido juntamente com o miolo de alcatra e não separado.
-    Uma alternativa para que a maminha seja uma carne mais valorizada, é colocar o corte em bandejas, ou em embalagem a vácuo, agregando valor ao corte, que é ótima opção para um bom churrasco.
-    Sempre que possível asse-a com sua própria gordura para que a carne permaneça suculenta e macia e não perca sua umidade natural e nutrientes.
-    Pode assar envolta em papel alumínio ou celofane.
+    item_maminha_2 = ItemModel(titulo="Dicas e curiosidades",  image_name=None, descricao="""Uma peça de maminha pesa, em média, 2kg. A maminha tem uma pequena diferença em relação ao miolo da alcatra. Suas fibras são em forma de leque e o corte deve ser feito contra as fibras, em leque mesmo, mas isso compromete, de certa forma, as pontas. Na Argentina, esse corte é bem mais aproveitado que no Brasil, pois neste tem sido vendido juntamente com o miolo de alcatra e não separado.
+
+    Uma alternativa para que a maminha seja uma carne mais valorizada, é colocar o corte em bandejas, ou em embalagem a vácuo, agregando valor ao corte, que é ótima opção para um bom churrasco. Sempre que possível asse-a com sua própria gordura para que a carne permaneça suculenta e macia e não perca sua umidade natural e nutrientes. Pode assar envolta em papel alumínio ou celofane.
 
     Por sua localização atende pelos nomes de ponta de alcatra ou Colita de Cuadril (em espanhol), Aiguillette Baronne (em francês) e Tail of round ou Tri-tip (em inglês).
     """, tecnica_id=tecnica_maminha.id)
@@ -149,12 +143,9 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     #Item
 
     item_carne_1 = ItemModel(titulo="Manipulação e higiene da carne bovina", image_name="tecnica-carne-bovina",
-    descricao="""A carne bovina é um alimento extremamente rico em proteínas, vitaminas, sais minerais e elevado teor de umidade.
-    Estas características da carne a tornam um produto propício ao desenvolvimento de microrganismos, caso ela não seja conservada adequadamente e manipulada em condições rígidas de limpeza do local e do próprio manipulador.
+    descricao="""A carne bovina é um alimento extremamente rico em proteínas, vitaminas, sais minerais e elevado teor de umidade. Estas características da carne a tornam um produto propício ao desenvolvimento de microrganismos, caso ela não seja conservada adequadamente e manipulada em condições rígidas de limpeza do local e do próprio manipulador.
 
-    Para uma boa conservação da carne em casa são necessários cuidados rigorosos para evitar alterações e contaminações. Assim, deve-se sempre obedecer a limites de tempo e temperatura, que são utilizados nos vários métodos de conservação.
-    Quando se fala de carnes frescas, os meios de conservação são os que usam frio, como refrigeração e o congelamento. A refrigeração deve ser o método adotado para a carne que será preparada e consumida em até 72h após a compra.
-    No caso de período maior deve-se optar pelo congelamento. Se congelada, a carne deverá passar por um período de descongelamento para o seu preparo. Este processo também requer técnicas e cuidados essenciais para se manter a qualidade e a integridade do alimento.
+    Para uma boa conservação da carne em casa são necessários cuidados rigorosos para evitar alterações e contaminações. Assim, deve-se sempre obedecer a limites de tempo e temperatura, que são utilizados nos vários métodos de conservação. Quando se fala de carnes frescas, os meios de conservação são os que usam frio, como refrigeração e o congelamento. A refrigeração deve ser o método adotado para a carne que será preparada e consumida em até 72h após a compra. No caso de período maior deve-se optar pelo congelamento. Se congelada, a carne deverá passar por um período de descongelamento para o seu preparo. Este processo também requer técnicas e cuidados essenciais para se manter a qualidade e a integridade do alimento.
 
     Para garantir a qualidade da carne e a segurança alimentar de seus consumidores, é importante estar atento a alguns conselhos básicos de higiene, que devem virar rotina em toda prática culinária:
 
@@ -184,8 +175,8 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     db.session.commit()
 
 
-    item_ovo_1 = ItemModel(titulo="Como quebrar um ovo?", image_name="tecnica-ovo", descricao="""Pegue o ovo com a mão dominante. Faça isso com firmeza de modo que a lateral dele fique voltada para baixo.
-    Bata, com cuidado, uma mesma parte do ovo em uma superfície plana até a casca começar a ceder. Depois, pressione seu polegar contra a parte da casca que cedeu para abrir o ovo.
+    item_ovo_1 = ItemModel(titulo="Como quebrar um ovo?", image_name="tecnica-ovo", descricao="""Pegue o ovo com a mão dominante. Faça isso com firmeza de modo que a lateral dele fique voltada para baixo. Bata, com cuidado, uma mesma parte do ovo em uma superfície plana até a casca começar a ceder. Depois, pressione seu polegar contra a parte da casca que cedeu para abrir o ovo.
+
     Remova qualquer fragmento de casca que cair no ovo. Mesmo que você tenha dominado a técnica de quebrar ovos, algumas cascas ainda podem ficar na clara e na gema. Para resolver o problema, molhe os dedos e use-os para pegar as cascas. Dessa forma, a água deve atrair naturalmente os pedaços de casca aderidos no ovo.
     """, tecnica_id=tecnica_ovo.id)
 
@@ -196,16 +187,15 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     db.session.add(tecnica_medidas)
     db.session.commit()
 
-    item_medidas_1 = ItemModel(titulo="Medidas", image_name="tecnica-medidas", descricao="""
-    Se você está começando a se aventurar agora na cozinha, provavelmente já se deparou com medidas que te deixaram confuso. Afinal, quanto é uma pitada? um punhado?
+    item_medidas_1 = ItemModel(titulo="Medidas", image_name="tecnica-medidas", descricao="""Se você está começando a se aventurar agora na cozinha, provavelmente já se deparou com medidas que te deixaram confuso. Afinal, quanto é uma pitada? um punhado?
+
     Como, geralmente, as receitas citam base de medida que podem ter tamanhos bastante variados, o correto é usar medidores padronizados, que são facilmente encontrados em lojas de artigos de cozinha. Com os medidores, você terá menos problemas colocando uma quantidade diferente da necessária.
     """, tecnica_id = tecnica_medidas.id)
 
     db.session.add(item_medidas_1)
     db.session.commit()
 
-    item_medida_2 = ItemModel(titulo="Temos algumas dicas pra você se preparar", image_name=None, descricao="""
-    1. Meça condimentos em qualquer lugar que não seja sobre a tigela em que estão os outros ingredientes, porque se você errar vai estragar tudinho!
+    item_medida_2 = ItemModel(titulo="Temos algumas dicas pra você se preparar", image_name=None, descricao="""1. Meça condimentos em qualquer lugar que não seja sobre a tigela em que estão os outros ingredientes, porque se você errar vai estragar tudinho!
     2. Afofe e peneire ingredientes secos como farinhas, açúcar e outros, antes de serem medidos. Coloque-os cuidadosamente no recipiente de medida, sem comprimi-los.
     3. Coloque o recipiente para medir ingredientes líquidos sobre uma superfície reta e verifique o nível na altura da vista.
     4. Retire da Geladeira com antecedência as gorduras sólidas como manteigas, margarinas, banhas e outras, para que sejam medidas na temperatura ambiente. Coloque no recipiente de medida, apertando para que não fiquem buracos vazios ou bolhas de ar.
@@ -214,14 +204,12 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     db.session.add(item_medida_2)
     db.session.commit()
 
-    item_medida_3 = ItemModel(titulo="Agora algumas medidas que você pode tomar como base", image_name=None, descricao="""
-    1. Uma pitada quer dizer pegar um pouquinho do ingrediente na ponta dos dedos juntando o polegar e o indicador; o que ficar entre os dois dedos é a pitada ou 1/2 colher (chá). Experimente se com a pitada sua receita ficou boa. Geralmente a pitada é a gosto principalmente no caso do sal.
+    item_medida_3 = ItemModel(titulo="Agora algumas medidas que você pode tomar como base", image_name=None, descricao="""1. Uma pitada quer dizer pegar um pouquinho do ingrediente na ponta dos dedos juntando o polegar e o indicador; o que ficar entre os dois dedos é a pitada ou 1/2 colher (chá). Experimente se com a pitada sua receita ficou boa. Geralmente a pitada é a gosto principalmente no caso do sal.
     2. Um punhado quer dizer encher a mão com o ingrediente que vai ser usado e fechá-la; o que ficar na sua mão é o punhado.
     3. uma porção de macarrão basta usar o buraco no meio da colher de macarrão para medir ainda cru.
     4. fio é quando traçamos uma linha, fazemos um risco com o ingrediente.
 
-    Lembrando que estes números são valores aproximados, pois cada ingrediente tem um peso diferente, e a quantidade varia conforme a massa de cada um.
-    Portanto, o ideal mesmo é ter o medidor. Utilize essas medidas apenas como base, e em último caso, utilize uma lata ou caixa vazia (de creme de leite, ou milho) para medir, pegando como medida a quantidade descrita no rótulo.
+    Lembrando que estes números são valores aproximados, pois cada ingrediente tem um peso diferente, e a quantidade varia conforme a massa de cada um. Portanto, o ideal mesmo é ter o medidor. Utilize essas medidas apenas como base, e em último caso, utilize uma lata ou caixa vazia (de creme de leite, ou milho) para medir, pegando como medida a quantidade descrita no rótulo.
     """, tecnica_id = tecnica_medidas.id)
 
     db.session.add(item_medida_3)
@@ -231,8 +219,7 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     db.session.add(tecnica_panelas)
     db.session.commit()
 
-    item_panela_1 = ItemModel(titulo="Tipos de Panelas", image_name="tecnica-panelas", descricao="""Existem diferentes tipos de panelas e cada um traz características únicas para o preparo das suas receitas.
-    Na hora de preparar nossas receitas favoritas, as panelas são itens essenciais e que fazem toda a diferença. Entretanto, o que muita gente não sabe é que existem diferentes tipos de panelas e cada uma delas, traz características únicas, que podem influenciar no preparo dos alimentos.
+    item_panela_1 = ItemModel(titulo="Tipos de Panelas", image_name="tecnica-panelas", descricao="""Existem diferentes tipos de panelas e cada um traz características únicas para o preparo das suas receitas. Na hora de preparar nossas receitas favoritas, as panelas são itens essenciais e que fazem toda a diferença. Entretanto, o que muita gente não sabe é que existem diferentes tipos de panelas e cada uma delas, traz características únicas, que podem influenciar no preparo dos alimentos.
     """, tecnica_id=tecnica_panelas.id)
 
     db.session.add(item_panela_1)
@@ -246,15 +233,13 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     db.session.add(item_panela_2)
     db.session.commit()
 
-    item_panela_3 = ItemModel(titulo="Panela Teflon (revestimento antiaderente)", image_name="tecnica-panelas-teflon", descricao="""
-    Este tipo de panela recebe um revestimento de antiaderentes, o que evita que os alimentos grudem. Ela é ótima para qualquer tipo de preparo, mas precisa de alguns cuidados, como a lavagem com esponjas macias e o uso de utensílios de plastico ou silicone, para evitar riscos e danos.
-    """, tecnica_id = tecnica_panelas.id)
+    item_panela_3 = ItemModel(titulo="Panela Teflon (revestimento antiaderente)", image_name="tecnica-panelas-teflon", descricao="""Este tipo de panela recebe um revestimento de antiaderentes, o que evita que os alimentos grudem. Ela é ótima para qualquer tipo de preparo, mas precisa de alguns cuidados, como a lavagem com esponjas macias e o uso de utensílios de plastico ou silicone, para evitar riscos e danos.""",
+     tecnica_id = tecnica_panelas.id)
 
     db.session.add(item_panela_3)
     db.session.commit()
 
-    item_panela_4 = ItemModel(titulo="Panela de Aço Inox", image_name="tecnica-panelas-aco", descricao="""Com alta durabilidade e excelente qualidade, as panelas de aço inox são ótimas para várias preparações na cozinha, incluindo aquelas que precisam ser cozidas por muito tempo.
-    Mesmo assim, este tipo de panela requer cuidados, tanto na hora de lavar quanto na conservação, pois elas tendem a escurecer se não forem bem secas. Uma desvantagem é o fato de não serem ideais para frituras, pois esquentam muito rápido e tendem a queimar os alimentos quando imersos em óleo.
+    item_panela_4 = ItemModel(titulo="Panela de Aço Inox", image_name="tecnica-panelas-aco", descricao="""Com alta durabilidade e excelente qualidade, as panelas de aço inox são ótimas para várias preparações na cozinha, incluindo aquelas que precisam ser cozidas por muito tempo. Mesmo assim, este tipo de panela requer cuidados, tanto na hora de lavar quanto na conservação, pois elas tendem a escurecer se não forem bem secas. Uma desvantagem é o fato de não serem ideais para frituras, pois esquentam muito rápido e tendem a queimar os alimentos quando imersos em óleo.
     """, tecnica_id=tecnica_panelas.id)
 
     db.session.add(item_panela_4)
@@ -264,14 +249,14 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     db.session.add(tecnica_utensilios)
     db.session.commit()
 
-    item_utensilio_1 = ItemModel(titulo="Utensilios", image_name="tecnica-utensilio", descricao="""Para ser funcional, uma cozinha não precisa ser muito grande, mas é indispensável que ela seja bem equipada. Assim, será mais fácil tornar seu dia a dia prático e fazer com que os preparos dos alimentos sejam mais rápidos, simples e adequados.
-    Até lá, é de suma importância contar com o básico, que lhe permitirá realizar uma série de preparos e serví-los adequadamente. Sem esses itens, dificilmente você conseguirá realizar as receitas mais triviais. Por isso, é ideal ter acessórios como as espátulas, que são ideais pra mexer ingredientes quentes e frios, além de serem ótimas pra servir patês, manteigas e muito mais! Vem comigo ver mais sobre elas!
+    item_utensilio_1 = ItemModel(titulo="Utensilios", image_name="tecnica-utensilio", descricao="""Para ser funcional, uma cozinha não precisa ser muito grande, mas é indispensável que ela seja bem equipada. Assim, será mais fácil tornar seu dia a dia prático e fazer com que os preparos dos alimentos sejam mais rápidos, simples e adequados. Até lá, é de suma importância contar com o básico, que lhe permitirá realizar uma série de preparos e serví-los adequadamente. Sem esses itens, dificilmente você conseguirá realizar as receitas mais triviais. Por isso, é ideal ter acessórios como as espátulas, que são ideais pra mexer ingredientes quentes e frios, além de serem ótimas pra servir patês, manteigas e muito mais! Vem comigo ver mais sobre elas!
     """, tecnica_id=tecnica_utensilios.id)
 
     db.session.add(item_utensilio_1)
     db.session.commit()
 
     item_utensilio_2 = ItemModel(titulo="Espátula de silicone", image_name=None, descricao="""As espátulas de silicone são incríveis pra qualquer tipo de alimento, além de não danificarem nenhum recipiente! O silicone ainda é fácil de lavar e bem flexível, viu?
+
     E sabe o que é mais legal? O silicone não transfere calor, ou seja, mesmo que você esteja cozinhando em alta temperatura, o cabo da espátula não esquenta! Quer mais? Uma espátula desse tipo suporta temperaturas de até 220°C!
     """, tecnica_id=tecnica_utensilios.id)
 
@@ -284,30 +269,26 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     db.session.add(item_utensilio_3)
     db.session.commit()
 
-    item_utensilio_4 = ItemModel(titulo="Espátula com furos", image_name=None, descricao="""
-    Pra quem prepara alimentos que precisam ser fritos, a espátula com furos é o acessório ideal! O modelo vem com aberturas pro óleo escorrer e, ao mesmo tempo, você ainda consegue pegar o alimento pra colocar em outro recipiente, além de poder mexer na própria panela. Legal, né? Tem espátulas que são feitas de nylon, um material super-resistente em altas temperaturas!
-    """, tecnica_id=tecnica_utensilios.id)
+    item_utensilio_4 = ItemModel(titulo="Espátula com furos", image_name=None, descricao="""Pra quem prepara alimentos que precisam ser fritos, a espátula com furos é o acessório ideal! O modelo vem com aberturas pro óleo escorrer e, ao mesmo tempo, você ainda consegue pegar o alimento pra colocar em outro recipiente, além de poder mexer na própria panela. Legal, né? Tem espátulas que são feitas de nylon, um material super-resistente em altas temperaturas!""",
+     tecnica_id=tecnica_utensilios.id)
 
     db.session.add(item_utensilio_4)
     db.session.commit()
 
-    item_utensilio_5 = ItemModel(titulo="Espátula reta", image_name=None, descricao="""
-    Ideal pra cortar pizzas e mexer em ingredientes que vão na chapa, a espátula reta é um dos modelos mais legais que existem, né? Sem contar que ela corta muito bem, além de ser fácil de lavar! Se você é daqueles que amam preparar refeições na chapa, aposte nesta espátula!
-    """, tecnica_id=tecnica_utensilios.id)
+    item_utensilio_5 = ItemModel(titulo="Espátula reta", image_name=None, descricao="""Ideal pra cortar pizzas e mexer em ingredientes que vão na chapa, a espátula reta é um dos modelos mais legais que existem, né? Sem contar que ela corta muito bem, além de ser fácil de lavar! Se você é daqueles que amam preparar refeições na chapa, aposte nesta espátula!""",
+     tecnica_id=tecnica_utensilios.id)
 
     db.session.add(item_utensilio_5)
     db.session.commit()
 
-    item_utensilio_6 = ItemModel(titulo="Espátula com dobra pra bolo", image_name=None, descricao="""
-    Outra tarefa pra espátula é passar coberturas em um bolo, além de também fatiar. Gente, a espátula com dobra é incrível, pois ajuda a cortar melhor, sem erros, e ainda passa, por exemplo, aquela cobertura de chocolate em cima do bolo! Adorei!
-    """, tecnica_id=tecnica_utensilios.id)
+    item_utensilio_6 = ItemModel(titulo="Espátula com dobra pra bolo", image_name=None, descricao="""Outra tarefa pra espátula é passar coberturas em um bolo, além de também fatiar. Gente, a espátula com dobra é incrível, pois ajuda a cortar melhor, sem erros, e ainda passa, por exemplo, aquela cobertura de chocolate em cima do bolo! Adorei!""",
+     tecnica_id=tecnica_utensilios.id)
 
     db.session.add(item_utensilio_6)
     db.session.commit()
 
-    item_utensilio_7 = ItemModel(titulo="Espátula pra torta", image_name=None, descricao="""
-    Cortar uma torta nunca mais será a mesma coisa depois que você usar uma espátula! É incrível como ela corta massas de tortas e ajuda você a tirar fatias sem quebrar, legal, né? Um dos melhores modelos são os feitos em aço inox, fáceis de lavar, duram bastante e ainda são higiênicos.
-    """, tecnica_id = tecnica_utensilios.id)
+    item_utensilio_7 = ItemModel(titulo="Espátula pra torta", image_name=None, descricao="""Cortar uma torta nunca mais será a mesma coisa depois que você usar uma espátula! É incrível como ela corta massas de tortas e ajuda você a tirar fatias sem quebrar, legal, né? Um dos melhores modelos são os feitos em aço inox, fáceis de lavar, duram bastante e ainda são higiênicos.""",
+     tecnica_id = tecnica_utensilios.id)
 
     db.session.add(item_utensilio_7)
     db.session.commit()
