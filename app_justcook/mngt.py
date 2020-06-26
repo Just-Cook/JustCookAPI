@@ -329,6 +329,11 @@ Quanto a onde colocar os seus alimentos para assar ou cozinhar, para usar um cal
     modulo_culinaria_basica = ModuloModel(titulo="O Começo de uma Aventura", subtitulo="Culinária Básica", image_name="modulo-culinaria-basica",
     descricao="Nesse módulos você aprenderá receitas básicas pra sobreviver na cozinha", nivel=1)
 
+    modulo_culinaria_basica.tecnicas.append(tecnica_ovo)
+    modulo_culinaria_basica.tecnicas.append(tecnica_medidas)
+    modulo_culinaria_basica.tecnicas.append(tecnica_panelas)
+    modulo_culinaria_basica.tecnicas.append(tecnica_utensilios)
+
     db.session.add(modulo_culinaria_basica)
     db.session.commit()
 
