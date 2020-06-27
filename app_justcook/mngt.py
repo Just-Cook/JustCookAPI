@@ -343,7 +343,7 @@ Além da cana, há açúcar nas frutas e no milho (a frutose) e no leite (a lact
     db.session.add(tecnica_frituras)
     db.session.commit()
 
-    item_frituras_1 = ItemModel(titulo="O processo de fritura", image_name="tecninca-fritura", descricao="""Na fritura, observa-se um processo simultâneo de transferência de calor e de massa: o calor é transferido do óleo para o alimento; a água que evapora do alimento é absorvida pelo óleo. Assim, os fatores que afetam a transferência de calor e da massa afetam as propriedades térmicas e físico-químicas do óleo e do alimento.
+    item_frituras_1 = ItemModel(titulo="O processo de fritura", image_name="tecnica-frituras", descricao="""Na fritura, observa-se um processo simultâneo de transferência de calor e de massa: o calor é transferido do óleo para o alimento; a água que evapora do alimento é absorvida pelo óleo. Assim, os fatores que afetam a transferência de calor e da massa afetam as propriedades térmicas e físico-químicas do óleo e do alimento.
 
 O processo de fritura é realizado em recipientes abertos,à temperatura elevada (180 – 200°C), em contato direto com o ar. A fritura é um processo apropriado aos vegetais ricos em amido, como é o caso das batatas e mandioca. Pela brusca imersão em gordura quente, o amido forma uma crosta impermeável que retém em seu interior o vapor de água.
 
