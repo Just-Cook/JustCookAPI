@@ -762,7 +762,7 @@ Para levar uma vida mais saudável, experimente trocar o trigo por arroz integra
     db.session.add(ingrediente_ovo_4)
     db.session.commit()
 
-    ingrediente_macarrao_1 = IngredienteModel(nome="macarrão espaguete", quantidade=None, unidade="1/2 pct", receita_id= receita_macarrao.id)
+    ingrediente_macarrao_1 = IngredienteModel(nome="macarrão espaguete", quantidade=0.5, unidade="pct", receita_id= receita_macarrao.id)
 
     db.session.add(ingrediente_macarrao_1)
     db.session.commit()
@@ -787,7 +787,7 @@ Para levar uma vida mais saudável, experimente trocar o trigo por arroz integra
     db.session.add(ingrediente_macarrao_5)
     db.session.commit()
 
-    ingrediente_macarrao_6 = IngredienteModel(nome="cebola", quantidade=None, unidade="1/2 un", receita_id=receita_macarrao.id)
+    ingrediente_macarrao_6 = IngredienteModel(nome="cebola", quantidade=0.5, unidade="un", receita_id=receita_macarrao.id)
 
     db.session.add(ingrediente_macarrao_6)
     db.session.commit()
@@ -808,7 +808,7 @@ Para levar uma vida mais saudável, experimente trocar o trigo por arroz integra
     db.session.commit()
 
 
-    ingrediente_cerveja_1 = IngredienteModel(nome="açúcar mascavo", quantidade=None, unidade="1/2 xíc", receita_id=receita_cerveja.id)
+    ingrediente_cerveja_1 = IngredienteModel(nome="açúcar mascavo", quantidade=0.5, unidade="xíc", receita_id=receita_cerveja.id)
 
     db.session.add(ingrediente_cerveja_1)
     db.session.commit()
@@ -838,7 +838,7 @@ Para levar uma vida mais saudável, experimente trocar o trigo por arroz integra
     db.session.add(ingrediente_cerveja_6)
     db.session.commit()
 
-    ingrediente_cerveja_7 = IngredienteModel(nome="Nata ou creme de leite", quantidade=None, unidade="1/4 xíc", receita_id=receita_cerveja.id)
+    ingrediente_cerveja_7 = IngredienteModel(nome="Nata ou creme de leite", quantidade=0.25, unidade="xíc", receita_id=receita_cerveja.id)
 
     db.session.add(ingrediente_cerveja_7)
     db.session.commit()
@@ -863,7 +863,7 @@ Para levar uma vida mais saudável, experimente trocar o trigo por arroz integra
     db.session.add(ingrediente_bolinho_chuva_3)
     db.session.commit()
 
-    ingrediente_bolinho_chuva_4 = IngredienteModel(nome="farinha de trigo", quantidade=None, unidade="2,5 xic", receita_id=receita_bolinho_chuva.id )
+    ingrediente_bolinho_chuva_4 = IngredienteModel(nome="farinha de trigo", quantidade=2.5, unidade="xic", receita_id=receita_bolinho_chuva.id )
 
 
     db.session.add(ingrediente_bolinho_chuva_4)
@@ -936,7 +936,7 @@ Para levar uma vida mais saudável, experimente trocar o trigo por arroz integra
     db.session.add(ingrediente_frango_4)
     db.session.commit()
 
-    ingrediente_frango_5 = IngredienteModel(nome="tomate", quantidade=None, unidade="1/2 un", receita_id=receita_frango.id)
+    ingrediente_frango_5 = IngredienteModel(nome="tomate", quantidade=0.5, unidade="un", receita_id=receita_frango.id)
 
     db.session.add(ingrediente_frango_5)
     db.session.commit()
@@ -946,7 +946,7 @@ Para levar uma vida mais saudável, experimente trocar o trigo por arroz integra
     db.session.add(ingrediente_frango_6)
     db.session.commit()
 
-    ingrediente_frango_7 = IngredienteModel(nome="molho de tomate", quantidade=None, unidade="2,5 xic", receita_id=receita_frango.id)
+    ingrediente_frango_7 = IngredienteModel(nome="molho de tomate", quantidade=0.5, unidade="xic", receita_id=receita_frango.id)
 
     db.session.add(ingrediente_frango_7)
     db.session.commit()
